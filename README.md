@@ -2,8 +2,7 @@
 
 ![Tableau Project](http://recordit.co/EjVb6fLw6u.gif)
 
-This Project pulls daily Cornoavirus data from [this api](https://github.com/ExpDev07/coronavirus-tracker-api) and uploads it to a google sheets file. From the google sheets file, I use the data for multiple Tableau Visulizations. You can see my Tableau project [here](https://public.tableau.com/profile/chase.austin#!/vizhome/CoronavirusCOVID-19USCases/USMap).
-I call my python function every day from an EC2 instance using cloud watch triggers.
+This Project pulls daily Cornoavirus data from [this api](https://github.com/ExpDev07/coronavirus-tracker-api) and uploads it to a google sheets file. From the google sheets file, I use the data for multiple Tableau Visulizations. You can see my Tableau project [here](https://public.tableau.com/profile/chase.austin#!/vizhome/CoronavirusCOVID-19USCases/USMap). You can view my google sheet where I store my data [here.](https://docs.google.com/spreadsheets/d/1R1JiUvjdLMXHnt1S9tkUTFoYdy37tJVD1b-apvu711k/edit?usp=sharing) I call my python function every day from an EC2 instance using cloud watch triggers.
 
 ## Getting Started
 
@@ -33,7 +32,15 @@ I call my python function every day from an EC2 instance using cloud watch trigg
 sudo apt-get update
 sudo apt-get upgrade python3 -y
 sudo apt-install python3-pip -y
+sudo apt-get install python3-venv -y
+```
 
+Setup Virutal Enviroment and install pip packages
+```
+python3 -m venv env
+source env/bin/activate
+
+pip3 install requests
 pip3 install COVID19PY
 pip3 install gspread
 pip3 install --upgrade oauth2client
@@ -42,7 +49,12 @@ pip3 install --upgrade oauth2client
 
 8. Setup a Cron Job for EC2 (Run Script on instance start)
 
-- Copy and paste the contents of cronFile into 
+   - Stop instance
+   - Select instance, then Actions, Instance Settings, View/Change User Data
+   - Copy contents of userDataScript.txt into window
+   - Select plain text and save
+
+### You should now pull data to your google sheets at the intervals you selected with AWS Cloud Watch
 
 9. [Install Tableau](https://public.tableau.com/en-us/s/)
 10. [Link Tableau Data Source to Google Sheet](resources) (Video number 3)
