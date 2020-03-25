@@ -5,12 +5,16 @@ I call my python function every day from an EC2 instance using cloud watch trigg
 
 ## Getting Started
 
-To make this project yourself, first yoy will have to emable google auth
-Then Pull repo and upload credentials file
-Make EC2 insstances
+**To setup your own tableau server for corona virus tracking, you will need to:**
 
-Tableau Tutorials
-
+- Pull repo
+- Setup a virtual enviroment
+- Obtain OAuth2 credentials from Google Developers Console
+- Create Google Sheet
+- Create AWS EC2 Instance
+- Setup AWS Lambda Function to Start/Stop EC2 Instance
+- Install Tableau
+- Link Tableau Data Source to Google Sheet
 
 ### Prerequisites
 
