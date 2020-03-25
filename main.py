@@ -23,19 +23,18 @@ covid19 = COVID19Py.COVID19(data_source="csbs")
 data = covid19.getLocationByCountryCode("US")
 
 # get date
-#today = date.today().strftime("%d/%m/%Y")
+today = date.today().strftime("%d/%m/%Y")
 
 # add header
 worksheet.update("A1", [["Date", "LastUpdated", "Country", "State", "County", "Latitude", "Longitude", "Confirmed", "Deaths", "Recovered"]])
 nextRow = len(worksheet.get_all_values()) + 1
-
 
 # loop through json data
 for row in data:
 
     print(str(nextRow-1))
     # cell info
-    date = "03/24/2020"
+    date = today
     lastUpdated = row["last_updated"]
     country = "US"
     state = row["province"]

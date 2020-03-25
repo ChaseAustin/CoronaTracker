@@ -12,8 +12,9 @@ I call my python function every day from an EC2 instance using cloud watch trigg
 - Obtain OAuth2 credentials from Google Developers Console
 - Create Google Sheet
 - Create AWS EC2 Instance
-- Pull repo
-- Setup a virtual enviroment
+- Pull Repo
+- Transfer OAuth2 Json Credentials
+- Setup Install Packages
 - Setup AWS Lambda Function to Start/Stop EC2 Instance
 - Install Tableau
 - Link Tableau Data Source to Google Sheet
@@ -25,19 +26,24 @@ I call my python function every day from an EC2 instance using cloud watch trigg
 3. [Create AWS EC2 Instance](https://medium.com/employbl/how-to-launch-an-ec2-instance-de568295205d)
 4. [Pull this repo](https://medium.com/@sriteja95/login-to-aws-ec2-instance-and-clone-your-code-from-git-hub-repo-using-ubuntu-36fbf8bdc41b)
 5. [Transfer OAuth2 JSON](https://github.com/juanfrans/notes/wiki/Copying-Files-Between-Local-Computer-and-Instance-(AWS))
-6. Setup a virtual enviroment
+
+
+6. Install Packages
 ```
-python3 -m venv env
-source env/bin/activate
+sudo apt-get update
+sudo apt-get upgrade python3 -y
+sudo apt-install python3-pip -y
+
+pip3 install COVID19PY
+pip3 install gspread
+pip3 install --upgrade oauth2client
 ```
-7. Install Packages
-```
-pip install COVID19PY
-pip install datetime
-pip install gspread
-pip install time
-```
-8. [Setup AWS Lambda Function to Start/Stop EC2 Instance](https://aws.amazon.com/premiumsupport/knowledge-center/start-stop-lambda-cloudwatch/)
+7. [Setup AWS Lambda Function to Start/Stop EC2 Instance](https://aws.amazon.com/premiumsupport/knowledge-center/start-stop-lambda-cloudwatch/)
+
+8. Setup a Cron Job for EC2 (Run Script on instance start)
+
+- Copy and paste the contents of cronFile into 
+
 9. [Install Tableau](https://public.tableau.com/en-us/s/)
 10. [Link Tableau Data Source to Google Sheet](resources) (Video number 3)
 
