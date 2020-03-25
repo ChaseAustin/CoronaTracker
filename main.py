@@ -23,7 +23,7 @@ covid19 = COVID19Py.COVID19(data_source="csbs")
 data = covid19.getLocationByCountryCode("US")
 
 # get date
-today = date.today().strftime("%d/%m/%Y")
+today = date.today().strftime("%m/%d/%Y")
 
 # add header
 worksheet.update("A1", [["Date", "LastUpdated", "Country", "State", "County", "Latitude", "Longitude", "Confirmed", "Deaths", "Recovered"]])
