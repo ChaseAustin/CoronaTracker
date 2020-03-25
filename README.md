@@ -7,102 +7,49 @@ I call my python function every day from an EC2 instance using cloud watch trigg
 
 **To setup your own tableau server for corona virus tracking, you will need to:**
 
-- Pull repo
-- Setup a virtual enviroment
 - Obtain OAuth2 credentials from Google Developers Console
 - Create Google Sheet
 - Create AWS EC2 Instance
+- Pull repo
+- Setup a virtual enviroment
 - Setup AWS Lambda Function to Start/Stop EC2 Instance
 - Install Tableau
 - Link Tableau Data Source to Google Sheet
 
-### Prerequisites
+### Setup
 
-First pull repo
-
-cd dir
-
-Then setup a virtual enviroment
-
+(Obtain OAuth2 credentials from Google Developers Console)[https://gspread.readthedocs.io/en/latest/oauth2.html]
+(Create Google Sheet)[https://www.google.com/sheets/about/] (I recomend scrolling to the bottom of the page and increasing the number of rows. My First data set was more than 100 rows, which is the default option)
+(Create AWS EC2 Instance)[https://medium.com/employbl/how-to-launch-an-ec2-instance-de568295205d]
+(Pull this repo)[https://medium.com/@sriteja95/login-to-aws-ec2-instance-and-clone-your-code-from-git-hub-repo-using-ubuntu-36fbf8bdc41b]
+(Transfer OAuth2 JSON)[https://github.com/juanfrans/notes/wiki/Copying-Files-Between-Local-Computer-and-Instance-(AWS)]
+Setup a virtual enviroment
+```
 python3 -m venv env
 source env/bin/activate
-
-Install pip modules
+```
+Install Packages
+```
 pip install COVID19PY
 pip install datetime
 pip install gspread
 pip install time
-
-
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+(Setup AWS Lambda Function to Start/Stop EC2 Instance)[https://aws.amazon.com/premiumsupport/knowledge-center/start-stop-lambda-cloudwatch/]
+(Install Tableau)[https://public.tableau.com/en-us/s/]
+(Link Tableau Data Source to Google Sheet)[resources] (Number 3)
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [COVID19Py](https://github.com/Kamaropoulos/COVID19Py) - @Kamaropoulos Coronavirus python API wrappet
+* [gspread](https://github.com/burnash/gspread) -@burnash Python package for editing Google Sheets
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Chase Austin** - *Initial work* - [GitHub](https://github.com/ChaseAustin/)
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* **jhu** - https://github.com/CSSEGISandData/COVID-19 - Worldwide Data repository operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). 
+
+* **csbs** - https://www.csbs.org/information-covid-19-coronavirus - U.S. County data that comes from the Conference of State Bank Supervisors.
