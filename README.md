@@ -2,7 +2,7 @@
 
 ![Tableau Project](http://recordit.co/EjVb6fLw6u.gif)
 
-This Project pulls daily Cornoavirus data from this api and uploads it to a google sheets file. From the google sheets file, I use the data for multiple Tableau Visulizations. You can see my tableau project here.
+This Project pulls daily Cornoavirus data from [this api](https://github.com/ExpDev07/coronavirus-tracker-api) and uploads it to a google sheets file. From the google sheets file, I use the data for multiple Tableau Visulizations. You can see my Tableau project [here](https://public.tableau.com/profile/chase.austin#!/vizhome/CoronavirusCOVID-19USCases/USMap).
 I call my python function every day from an EC2 instance using cloud watch triggers.
 
 ## Getting Started
