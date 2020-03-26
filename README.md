@@ -24,7 +24,7 @@ This Project pulls daily Cornoavirus data from [this api](https://github.com/Exp
 1. [Obtain OAuth2 credentials from Google Developers Console](https://gspread.readthedocs.io/en/latest/oauth2.html)
 2. [Create Google Sheet](https://www.google.com/sheets/about/) (I recomend scrolling to the bottom of the page and increasing the number of rows. My First data set was more than 100 rows, which is the default option)
 3. [Create AWS EC2 Instance](https://medium.com/employbl/how-to-launch-an-ec2-instance-de568295205d)
-4. [Pull repo on EC2](https://medium.com/@sriteja95/login-to-aws-ec2-instance-and-clone-your-code-from-git-hub-repo-using-ubuntu-36fbf8bdc41b)
+4. [Pull Repo on EC2](https://medium.com/@sriteja95/login-to-aws-ec2-instance-and-clone-your-code-from-git-hub-repo-using-ubuntu-36fbf8bdc41b)
 5. [Transfer OAuth2 JSON](https://github.com/juanfrans/notes/wiki/Copying-Files-Between-Local-Computer-and-Instance-(AWS))
 
 
@@ -58,7 +58,7 @@ pip3 install --upgrade oauth2client
 #### You should now pull data to your google sheets at the intervals you selected with AWS Cloud Watch
 
 9. [Install Tableau](https://public.tableau.com/en-us/s/)
-10. [Link Tableau Data Source to Google Sheet](resources) (Video number 3)
+10. [Link Tableau Data Source to Google Sheet](https://public.tableau.com/en-us/s/resources) (Video number 3)
 
 ## Built With
 
